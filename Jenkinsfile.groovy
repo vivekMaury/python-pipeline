@@ -7,6 +7,6 @@ node() {
     bat 'python hello.py'
   }
   stage('publish') {
-    junit 'reports/*.xml'
+    bat 'all stage is publish'
   }
 }
