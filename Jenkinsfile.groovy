@@ -1,11 +1,17 @@
-node {
-  agent {label "linux"}
-  
+pipeline {
+    agent any
     options {
-      buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '10', numToKeepStr: '10')
+        buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')
         }
-  stage('build') {
-    bat 'python hello.py'
-    bat 'python del_buil_his.py'
-  }
+     stages {
+        stage('First') {
+            steps {
+                echo 'Hello World'
+            }
+      stage('build') {
+       bat 'python hello.py'
+       bat 'python del_buil_his.py'
+      }
+   }
 }
+       
