@@ -3,7 +3,7 @@ pipeline {
     options {
         buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')
         }
-     stages {
+     
         stage('First') {
             steps {
                 echo 'Hello World'
@@ -13,6 +13,5 @@ pipeline {
        bat 'python del_buil_his.py'
          }
       }
-   }
 }
        
