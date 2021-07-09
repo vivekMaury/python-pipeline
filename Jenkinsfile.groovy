@@ -4,7 +4,7 @@ node() {
     checkout scm
   }
   stage('build') {
-    bat "behave -i test.feature --junit"
+    bat 'python hello.py'
   }
   stage('publish') {
     junit 'reports/*.xml'
