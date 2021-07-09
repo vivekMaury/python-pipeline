@@ -1,10 +1,8 @@
-node() {
-  stage('checkout') {
-    deleteDir()
-    checkout scm
-    }
+pipeline {
+  agent {label "linux"}
+  
     options {
-    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '10', numToKeepStr: '10')
+      buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '10', numToKeepStr: '10')
         }
   stage('build') {
     bat 'python hello.py'
