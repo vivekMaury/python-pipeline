@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo 'Building'
                 bat 'python hello.py'
-                bat 'python del_buil_his.py'
+               // bat 'python del_buil_his.py'
             } 
          }
     }
