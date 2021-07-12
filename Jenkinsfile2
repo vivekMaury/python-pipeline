@@ -18,5 +18,6 @@ pipeline {
                // bat 'python del_buil_his.py'
             } 
          }
+        
     }
 }
