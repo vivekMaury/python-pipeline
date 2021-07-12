@@ -10,10 +10,11 @@ pipeline {
                 echo 'Hello World'
             }
         }
-            stage('build') {
-             bat 'python hello.py'
-             bat 'python del_buil_his.py'
-           }
-        
+         stage('Build') {
+            steps {
+                echo 'Building'
+                bat 'python hello.py'
+                bat 'python del_buil_his.py'
+            }       
     }
 }
