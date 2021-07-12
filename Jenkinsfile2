@@ -16,8 +16,9 @@ pipeline {
                 echo 'Building'
                 bat 'python hello.py'
                // bat 'python del_buil_his.py'
-                bat 'python zip_app.py'
+                //bat 'python zip_app.py'
                }
           }
+          
       }
 }
