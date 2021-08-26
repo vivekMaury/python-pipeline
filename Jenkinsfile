@@ -3,14 +3,15 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Hello World'
+                echo 'Build job Started'
+		bat 'build.bat'
 		
             }
         }
         stage('Build_BL') {
             steps {
-                echo 'Building'
-		bat 'hello.bat'
+                echo 'Build BootLoader started'
+		bat 'build_BL.bat'
             }
         }
     }
