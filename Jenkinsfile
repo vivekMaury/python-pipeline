@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Build BootLoader started'
 		bat 'build_BL.bat'
-		python 'test.py'
+		bat python 'test.py'
 		
             }
         }
