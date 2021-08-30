@@ -4,14 +4,14 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Build job Started'
-		bat 'python build.py'
+		bat 'python aa/a/b/c/build.py'
 		
             }
         }
         stage('Build_BL') {
             steps {
                 echo 'Build BootLoader started'
-		bat 'python build_BL.py'
+		echo 'python build_BL.py'
 		
 		
             }
