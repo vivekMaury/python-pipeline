@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Build job Started'
 		bat 'python aa/a/b/c/build.py'
+		echo 'python file successfully called'
 		
             }
         }
